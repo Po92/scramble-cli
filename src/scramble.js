@@ -17,7 +17,14 @@ function scrambleWord(word) {
  */
 function isCorrect(word, guess) {
   // TODO: compare after normalising case & trimming 🧐
-  return false; // ← placeholder so tests fail
+  if(word.toUpperCase() == guess.toUpperCase())
+    {
+    return true;
+  }
+  else
+  {
+  return false;} // ← placeholder so tests fail
 }
 
 module.exports = { scrambleWord, isCorrect };
+

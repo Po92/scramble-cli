@@ -18,6 +18,9 @@ describe("isCorrect", () => {
     expect(isCorrect("JavaScript", "javascript")).toBe(true);
   });
 
+  it("identifies the correct guess (case‑insensitive)", () => {
+    expect(isCorrect("JavaScript", " javascript ")).toBe(false);
+  });
   it("rejects an incorrect guess", () => {
     expect(isCorrect("node", "deno")).toBe(false);
   });
